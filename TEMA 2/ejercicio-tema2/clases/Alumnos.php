@@ -1,0 +1,1 @@
+edad asignatura[] cursoAbonado=bool 

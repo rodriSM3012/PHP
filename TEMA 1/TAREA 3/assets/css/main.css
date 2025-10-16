@@ -1,0 +1,11 @@
+table {
+    padding: 8;
+}
+
+body > p {
+    align-items: center;
+}
+
+body {
+    font-family: monospace;
+}

@@ -1,0 +1,1 @@
+asignatura (solo 1) titular=bool 
