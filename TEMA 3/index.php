@@ -1,5 +1,9 @@
 <?php
 echo $_SERVER['REQUEST_METHOD'] . "<br/>";
+
+$nombre = $_GET["nombre"];
+$apellidos = $_GET["apellidos"];
+
 echo "Hola, " . $_GET["nombre"] . "." . "<br/>";
 echo "Hola, " . $_GET["nombre"] . " " . $_GET["apellidos"] . "." . "<br/>";
 
