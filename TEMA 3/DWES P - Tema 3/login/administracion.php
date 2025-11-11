@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+// si no existe la variable de sesion o es distinto de admin manda al usuario a index.php 
 if(!isset($_SESSION["rol"])){
     header("Location: index.php");
 } else if ($_SESSION["rol"]!="admin") {
