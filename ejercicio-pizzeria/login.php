@@ -68,6 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
+    <?php require_once "./menu.php"; ?>
     <h1>Login</h1>
     <p><?php echo $message; ?></p>
 
