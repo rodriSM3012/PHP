@@ -10,7 +10,7 @@ $message = "";
 try {
     $conecta = new PDO($cadena_conexion, $usuario, $clave);
 
-    $query = "SELECT nombre, descripcion, precio, imagen FROM pizzas WHERE id=:$id"; // en consulta preparadas se pasan con :
+    $query = "SELECT nombre, descripcion, precio, imagen FROM pizzas WHERE id=:id"; // en consulta preparadas se pasan con :
     $consulta = $conecta->prepare($query);
     $consulta->bindParam(":id", $id);
     $consulta->execute(); // $consulta es un array con nombre precio imagen
@@ -19,7 +19,7 @@ try {
         $nombre = htmlspecialchars($pizza["nombre"]);
         $descripcion = htmlspecialchars($pizza["descripcion"]);
         $precio = htmlspecialchars($pizza["precio"]);
-        $imagen = htmlspecialchars($pizza["nombre"]);
+        $imagen = htmlspecialchars($pizza["imagen"]);
     }
     // $pizzas = $consulta->fetchAll(PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
