@@ -4,5 +4,16 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"peacock.color": "#3d5da1",
+		"workbench.colorTheme": "Best Themes - Stellar",
+		"workbench.colorCustomizations": {
+			"statusBar.background": "#3d5da1",
+			"statusBar.foreground": "#e7e7e7",
+			"statusBarItem.hoverBackground": "#5375be",
+			"statusBarItem.remoteBackground": "#3d5da1",
+			"statusBarItem.remoteForeground": "#e7e7e7",
+			"tab.activeBorder": "#5375be"
+		}
+	}
 }
