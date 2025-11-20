@@ -15,6 +15,7 @@ $queryIng = "SELECT id, nombre FROM ingredientes ORDER BY nombre";
 $consultaIng = $conecta->prepare($queryIng);
 $consultaIng->execute();
 $ingredientes = $consultaIng->fetchAll(PDO::FETCH_ASSOC);
+var_dump($ingredientes);
 
 // Si se ha enviado el formulario
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -94,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <?php foreach ($ingredientes as $ing): ?>
                         <label>
                             <input type="checkbox" name="ingredientes[]" value="<?= $ing['id'] ?>">
-                            <!-- necesita los [] en name=ingredientes ↑  -->
+                            <!-- necesita los [] en name=ingredientes ↑ para que php sepa que es un array -->
                             <?= htmlspecialchars($ing['nombre']) ?>
                         </label><br>
                     <?php endforeach; ?>
