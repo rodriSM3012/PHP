@@ -96,6 +96,24 @@ class Pizza
         $stmt = $db->query("SELECT * FROM pizzas");
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public function loadById($id)
+    {
+        $stmt = $this->db->prepare("SELECT * FROM pizzas WHERE id = :id");
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+
+        $pizza = $stmt->fetch(PDO::FETCH_ASSOC);
+        if ($pizza) {
+            $this->id = $pizza['id'];
+            $this->nombre = $pizza['nombre'];
+            $this->descripcion = $pizza['descripcion'];
+            $this->precio = $pizza['precio'];
+            $this->imagen = $pizza['imagen'];
+            return true;
+        }
+        return false;
+    }
 }
 
 
