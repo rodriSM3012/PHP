@@ -13,14 +13,14 @@ try {
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $enemy = new Enemy($db);
-    $enemy->setName($_POST['name']);
-    $enemy->setDescription($_POST['description']);
-    $enemy->setHealth($_POST['health']);
-    $enemy->setStrength($_POST['strength']);
-    $enemy->setDefense($_POST['defense']);
+    $enemy->setName($_POST['name'])
+        ->setDescription($_POST['description'])
+        ->setHealth($_POST['health'])
+        ->setStrength($_POST['strength'])
+        ->setDefense($_POST['defense']);
 
     if ($enemy->save()) {
-        echo "Personaje guardado con exito";
+        echo "Enemigo guardado con exito";
     }
 }
 ?>
@@ -40,64 +40,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <h1>Crea un enemigo</h1>
     <form action=<?= $_SERVER['PHP_SELF'] ?> method='POST'>
         <label for="nameInput">Nombre:</label>
-        <input type="text" name="name" id="nameInput">
+        <input type="text" name="name" id="nameInput"><br>
 
         <label for="descriptionInput">Descripción:</label>
-        <input type="text" name="description" id="descriptionInput">
+        <textarea name="description" id="descriptionInput" placeholder="Inserta aquí una descripción"></textarea><br>
 
-        <label for="isBossInput">Jefe:</label>
-        <!-- TODO comprobar que funciona los botones radio -->
-        <input type="radio" name="isBossTrue" id="isBossInputTrue">Sí
-        <input type="radio" name="isBossNo" id="isBossInputFalse">No
+        <fieldset>
+            <legend>Jefe:</legend>
+            <input type="radio" name="isBoss" id="isBossTrue" value="true" />
+            <label for="isBossTrue">Sí</label>
+            <input type="radio" name="isBoss" id="isBossFalse" value="false" checked />
+            <label for="isBossFalse">No</label>
+        </fieldset><br>
 
         <label for="healthInput">Vida:</label>
-        <input type="number" name="health" id="healthInput" value="100">
+        <input type="number" name="health" id="healthInput" value="100"><br>
 
         <label for="strengthInput">Fuerza:</label>
-        <input type="nummber" name="strength" id="strengthInput" value="10">
+        <input type="nummber" name="strength" id="strengthInput" value="10"><br>
 
         <label for="defenseInput">Defensa:</label>
-        <input type="number" name="defense" id="defenseInput" value="10">
+        <input type="number" name="defense" id="defenseInput" value="10"><br>
 
         <button type="submit">Crear personaje</button>
     </form>
-
-    <h1>Personajes creados: </h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Imagen</th>
-                <th>Nombre</th>
-                <th>Descripcion</th>
-                <th>Salud</th>
-                <th>Fuerza</th>
-                <th>Defensa</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($characters as $character): ?>
-                <tr>
-                    <td>img</td>
-                    <td><?= $character['name'] ?></td>
-                    <td><?= $character['description'] ?></td>
-                    <td><?= $character['health'] ?></td>
-                    <td><?= $character['strength'] ?></td>
-                    <td><?= $character['defense'] ?></td>
-                    <td>
-                        <form action="edit_character.php" method="GET">
-                            <input type="hidden" name="id" value="<?= $character['id'] ?>">
-                            <button type="submit">Editar</button>
-                        </form>
-                        <form action="delete_character.php" method="POST">
-                            <input type="hidden" name="id" value="<?= $character['id'] ?>">
-                            <button type="submit">Borrar</button>
-                        </form>
-                    </td>
-                </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
 </body>
 
 </html>
