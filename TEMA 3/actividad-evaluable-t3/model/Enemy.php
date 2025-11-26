@@ -24,6 +24,7 @@ class Enemy
     public function setId($id)
     {
         $this->id = $id;
+        return $this;
     }
 
     public function getName()
@@ -37,6 +38,7 @@ class Enemy
     public function setName($name)
     {
         $this->name = $name;
+        return $this;
     }
 
     public function getDescription()
@@ -50,6 +52,7 @@ class Enemy
     public function setDescription($description)
     {
         $this->description = $description;
+        return $this;
     }
 
     public function getIsBoss()
@@ -63,6 +66,7 @@ class Enemy
     public function setIsBoss($isBoss)
     {
         $this->isBoss = $isBoss;
+        return $this;
     }
 
     public function getHealth()
@@ -76,6 +80,7 @@ class Enemy
     public function setHealth($health)
     {
         $this->health = $health;
+        return $this;
     }
 
     public function getStrength()
@@ -89,6 +94,7 @@ class Enemy
     public function setStrength($strength)
     {
         $this->strength = $strength;
+        return $this;
     }
 
     public function getDefense()
@@ -102,6 +108,7 @@ class Enemy
     public function setDefense($defense)
     {
         $this->defense = $defense;
+        return $this;
     }
 
     public function getImg()
@@ -115,6 +122,7 @@ class Enemy
     public function setImg($img)
     {
         $this->img = $img;
+        return $this;
     }
 
     public function getDb()
@@ -128,6 +136,7 @@ class Enemy
     public function setDb($db)
     {
         $this->db = $db;
+        return $this;
     }
 
     public function __construct($db)

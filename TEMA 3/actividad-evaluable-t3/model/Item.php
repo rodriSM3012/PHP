@@ -10,6 +10,11 @@ class Item
     private $img; // nombre del archivo de la imagen asociada al item
     private $db;
 
+    public function __construct($db)
+    {
+        $this->db = $db;
+    }
+
     // getters y setters
     public function getId()
     {
@@ -22,6 +27,7 @@ class Item
     public function setId($id)
     {
         $this->id = $id;
+        return $this;
     }
 
     public function getName()
@@ -35,6 +41,7 @@ class Item
     public function setName($name)
     {
         $this->name = $name;
+        return $this;
     }
 
     public function getDescription()
@@ -48,6 +55,7 @@ class Item
     public function setDescription($description)
     {
         $this->description = $description;
+        return $this;
     }
 
     public function getType()
@@ -61,6 +69,7 @@ class Item
     public function setType($type)
     {
         $this->type = $type;
+        return $this;
     }
 
     public function getEffect()
@@ -74,6 +83,7 @@ class Item
     public function setEffect($effect)
     {
         $this->effect = $effect;
+        return $this;
     }
 
     public function getImg()
@@ -87,6 +97,7 @@ class Item
     public function setImg($img)
     {
         $this->img = $img;
+        return $this;
     }
 
     public function getDb()
@@ -100,6 +111,7 @@ class Item
     public function setDb($db)
     {
         $this->db = $db;
+        return $this;
     }
 
     function save()
