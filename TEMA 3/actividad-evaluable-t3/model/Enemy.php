@@ -186,6 +186,7 @@ class Enemy
             $this->id = $data['id'];
             $this->name = $data['name'];
             $this->description = $data['description'];
+            $this->isBoss = $data['isBoss'];
             $this->health = $data['health'];
             $this->strength = $data['strength'];
             $this->defense = $data['defense'];
