@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <input type="number" name="health" id="healthInput" value="100"><br>
 
         <label for="strengthInput">Fuerza:</label>
-        <input type="nummber" name="strength" id="strengthInput" value="10"><br>
+        <input type="number" name="strength" id="strengthInput" value="10"><br>
 
         <label for="defenseInput">Defensa:</label>
         <input type="number" name="defense" id="defenseInput" value="10"><br>
