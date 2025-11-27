@@ -1,6 +1,6 @@
 <?php
 require_once("../../config/db.php");
-require_once("../../model/enemy.php");
+require_once("../../model/Enemy.php");
 
 $enemyId = isset($_GET['id']) ? intval($_GET['id']) : 0;
 
