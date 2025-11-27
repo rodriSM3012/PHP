@@ -122,6 +122,7 @@ class Item
                  SET name = :name, 
                  description = :description, 
                  type = :type,
+                 effect = :effect,
                  img = :img 
                  WHERE id = :id"
             );
