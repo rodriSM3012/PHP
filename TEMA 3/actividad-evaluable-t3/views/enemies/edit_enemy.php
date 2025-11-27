@@ -47,10 +47,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <form method="POST">
         <label for="name">Nombre:</label>
         <input type="text" name="name" id="name" value="<?= htmlspecialchars($enemy->getName()) ?>" required><br>
-        <!-- TODO cambiar text por textarea en descriciones -->
+
         <label for="description">Descripción:</label>
         <textarea name="description" id="description"
             required><?= htmlspecialchars($enemy->getDescription()) ?></textarea><br>
+
+        <fieldset>
+            <legend>Jefe:</legend>
+            <input type="radio" name="isBoss" id="isBossTrue" value="true" <?= ($enemy->getIsBoss()) ? "checked" : "" ?>
+                required />
+            <label for="isBossTrue">Sí</label>
+            <input type="radio" name="isBoss" id="isBossFalse" value="false" <?= ($enemy->getIsBoss()) ? "" : "checked" ?> required />
+            <label for="isBossFalse">No</label>
+        </fieldset><br>
 
         <label for="health">Vida:</label>
         <input type="number" name="health" id="health" value="<?= htmlspecialchars($enemy->getHealth()) ?>"
