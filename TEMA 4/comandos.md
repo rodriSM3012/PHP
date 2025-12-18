@@ -1,10 +1,17 @@
 # comandos de laravel
-## crear proyecto nuevo
+### crear proyecto nuevo
 `composer create-project laravel/laravel [nombre-proyecto]` 
-## lanzar servidor
+### lanzar servidor
 `php artisan serve`
-## crear vista
+### crear vista
 `php artisan make:controller PaginasController`
 todos los controladores tienen que terminar por Controller
-## crear migracion
+
+1. crear base de datos vacia en phpmyadmin
+2. hacer migracion
+### crear migracion
 `php artisan make:migration create_cursos_table`
+### comenzar migracion
+`php artisan migrate`
+### crear modelo
+`php artisan make:model Curso`
