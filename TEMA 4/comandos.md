@@ -6,3 +6,5 @@
 ## crear vista
 `php artisan make:controller PaginasController`
 todos los controladores tienen que terminar por Controller
+## crear migracion
+`php artisan make:migration create_cursos_table`
