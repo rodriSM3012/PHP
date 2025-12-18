@@ -46,4 +46,9 @@ class PaginasController extends Controller
     {
         return view('saludoPersonalizado', compact('nombre'));
     }
+
+    public function saludopersonalizadosinparametro()
+    {
+        return view('saludoPersonalizadoSinParametro');
+    }
 }
