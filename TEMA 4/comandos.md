@@ -1,4 +1,6 @@
 # comandos de laravel
+## crear proyecto nuevo
+`composer create-project laravel/laravel [nombre-proyecto]` 
 ## lanzar servidor
 `php artisan serve`
 ## crear vista
