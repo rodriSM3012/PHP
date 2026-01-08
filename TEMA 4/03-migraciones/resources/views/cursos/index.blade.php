@@ -1,5 +1,5 @@
 <ul>
-    @foreach ($cursos as $curso)
-        <li>{{ $curso->nombre }}</li>
-    @endforeach
+@foreach($cursos as $curso)
+    <li>{{ $curso->nombre }}</li>
+@endforeach
 </ul>
