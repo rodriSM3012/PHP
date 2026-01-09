@@ -15,3 +15,8 @@ todos los controladores tienen que terminar por Controller
 `php artisan migrate`
 ### crear modelo
 `php artisan make:model Curso`
+3. seeders
+### crear seeder
+`php artisan make:seeder PizzaSeeder`
+### ejecutar seeder
+``
