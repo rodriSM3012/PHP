@@ -5,8 +5,8 @@
     </tr>
     @foreach ($pizzas as $pizza)
         <tr>
-            <td>{{ $pizza . nombre }}</td>
-            <td></td>
+            <td><a href="{{ route('pizzas.showOnePizza') }}">{{ $pizza->nombre }}</a></td>
+            <td>{{ $pizza->precio }}</td>
         </tr>
     @endforeach
 </table>

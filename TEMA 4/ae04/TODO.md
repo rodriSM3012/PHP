@@ -1,0 +1,6 @@
+- [ ] 1
+    - 2 rutas 
+    - 2 vistas
+        - formulario crear pizza
+        - formulario modificar pizza → id
+    - controlador
