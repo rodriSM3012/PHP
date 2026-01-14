@@ -13,4 +13,19 @@ class PizzasController extends Controller
         $pizzas = Pizza::all();
         return view('pizzas.showAllPizzas', compact('pizzas'));
     }
+
+    public function create()
+    {
+        $ingredientes = Ingredientes::all();
+        return view("pizzas.create", compact("ingredientes"));
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            "nombre" => "required",
+            "descripcion" => "required",
+
+        ]);
+    }
 }
