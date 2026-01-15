@@ -4,3 +4,10 @@
         - formulario crear pizza
         - formulario modificar pizza → id
     - controlador
+- [ ] 2
+    - layout → title
+    - include → menu navegacion → 
+        - inicio
+        - crear pizza
+        - crear ingrediente CRUD
+        - listar ingredientes

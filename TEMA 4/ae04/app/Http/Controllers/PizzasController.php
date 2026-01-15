@@ -28,4 +28,18 @@ class PizzasController extends Controller
 
         ]);
     }
+
+    #TODO
+
+    // {
+    // return view('pizzas.confirmDelete');
+    // }
+
+    public function destroy(Pizza $pizza)
+    {
+        $pizza->delete();
+        return redirect()
+            ->route('Pizzas.showAllPizzas')
+            ->with('success', 'Pizza eliminada correctamente');
+    }
 }
