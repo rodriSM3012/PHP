@@ -11,23 +11,26 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('alumno_curso', function (Blueprint $table) {
+        Schema::create('ingrediente_pizza', function (Blueprint $table) {
             $table->id();
+            
+            $table->foreignId('pizza_id')
+            ->constrained()
+            ->onDelete('cascade');
 
-            $table->foreignId('curso_id')
-                ->constrained()
-                ->onDelete('cascade');
+            $table->foreignId('ingrediente_id')
+            ->constrained()
+            ->onDelete('cascade');
 
-            $table->foreignId('alumno_id')
-                ->constrained()
-                ->onDelete('cascade');
+            $table->timestamps();
         });
     }
+
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('alumno_curso');
+        Schema::dropIfExists('pizza_ingrediente');
     }
 };

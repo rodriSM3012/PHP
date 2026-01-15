@@ -1,22 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CursosController;
-use App\Http\Controllers\AlumnosController;
 use App\Http\Controllers\PizzasController;
+use App\Http\Controllers\PizzaController;
 
-Route::get('/', [CursosController::class, 'index'])->name('cursos.index');
-Route::get('/curso/{id}', [CursosController::class, 'show'])->name('curso.show');
-
-Route::get('/alumnos', [AlumnosController::class, 'showAlumnos'])->name('alumnos.show');
-Route::get('/alumno/{id}', [AlumnosController::class, 'showAlumno'])->name('alumno.show');
-
-Route::get('/alumnoscurso', [AlumnosController::class, 'showAlumnosCurso'])->name('alumnosCurso.show');
-Route::get('/alumnocurso/{id}', [AlumnosController::class, 'showAlumnoCurso'])->name('alumnoCurso.show');
-
+Route::get('/', [PizzaController::class, 'showAllPizzas'])->name('pizzas.showAllPizzas');
+Route::get('/pizza/{id}', [PizzaController::class, 'showOnePizza'])->name('pizzas.showOnePizza');
 
 Route::post('/pizzas', [PizzasController::class, 'store'])->name('pizzas.store');
 Route::get('/pizzas/create', [PizzasController::class, 'create'])->name('pizzas.create');
 
 Route::get('/pizzas/{id}/edit', [PizzasController::class, 'edit'])->name('pizzas.edit');
-Route::put('/pizzas/{id}', [PizzasController::class, 'update'])->name('#TODO');
+Route::put('/pizzas/{id}', [PizzasController::class, 'update'])->name('pizzas.update');

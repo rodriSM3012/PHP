@@ -7,5 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Pizza extends Model
 {
     protected $fillable = ['nombre', 'descripcion', 'precio'];
-    // TODO
+        public function ingredientes()
+    {
+        return $this->belongsToMany(Ingrediente::class);
+    }
+
 }
