@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 
 <h1>Nuevo Ingrediente</h1>
 

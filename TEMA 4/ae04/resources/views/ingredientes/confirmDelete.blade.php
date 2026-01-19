@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 
 <h1>Eliminar Ingrediente</h1>
 <p>¿Estas seguro de que deseas eliminar el ingrediente? <strong>{{ $ingrediente->nombre }}</strong></p>

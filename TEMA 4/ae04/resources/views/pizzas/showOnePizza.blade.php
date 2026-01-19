@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 
 <h1>{{ $pizza->nombre }}</h1>
 <h2>{{ $pizza->precio }}</h2>

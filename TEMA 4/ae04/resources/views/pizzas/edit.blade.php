@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 
 <input type="number" step="0.01" name="precio" value="{{ $pizza->precio }}">
 

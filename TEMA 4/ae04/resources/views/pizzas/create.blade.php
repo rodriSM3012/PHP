@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 
 <h1>Nueva Pizza</h1>
 
