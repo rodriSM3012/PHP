@@ -1,3 +1,5 @@
+@extends('layout.app')
+
 <table>
     @if (session('success'))
         <div>{{ session('success') }}</div>

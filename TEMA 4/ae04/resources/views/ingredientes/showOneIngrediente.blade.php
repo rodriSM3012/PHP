@@ -1,3 +1,5 @@
+@extends('layout.app')
+
 <h1>{{ $pizza->nombre }}</h1>
 <h2>{{ $pizza->precio }}</h2>
 <p>{{ $pizza->descripcion }}</p>

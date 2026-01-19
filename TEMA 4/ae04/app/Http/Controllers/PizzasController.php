@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Pizza;
+use App\Models\Ingrediente;
 
 class PizzasController extends Controller
 {
@@ -16,7 +17,7 @@ class PizzasController extends Controller
 
     public function create()
     {
-        $ingredientes = Ingredientes::all();
+        $ingredientes = Ingrediente::all();
         return view("pizzas.create", compact("ingredientes"));
     }
 
@@ -25,21 +26,24 @@ class PizzasController extends Controller
         $request->validate([
             "nombre" => "required",
             "descripcion" => "required",
-
         ]);
     }
 
-    #TODO
+    public function edit()
+    {
+        return view('pizzas.edit', compact('pizza'));
+    }
 
-    // {
-    // return view('pizzas.confirmDelete');
-    // }
+    public function delete()
+    {
+        return view('pizzas.confirmDelete');
+    }
 
     public function destroy(Pizza $pizza)
     {
         $pizza->delete();
         return redirect()
-            ->route('Pizzas.showAllPizzas')
+            ->route('pizzas.showAllPizzas')
             ->with('success', 'Pizza eliminada correctamente');
     }
 }

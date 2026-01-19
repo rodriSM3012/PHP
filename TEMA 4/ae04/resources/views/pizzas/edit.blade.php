@@ -1,3 +1,5 @@
+@extends('layout.app')
+
 <input type="number" step="0.01" name="precio" value="{{ $pizza->precio }}">
 
 <h3>Ingredientes</h3>
