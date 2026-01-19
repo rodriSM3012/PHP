@@ -11,8 +11,8 @@
     <ul>
         <li><a href="{{ route('pizzas.showAllPizzas') }}"></a>Lista de pizzas</li>
         <li><a href="{{ route('pizzas.create') }}"></a>Crear pizza</li>
-        <li><a href=""></a>Lista de ingredientes</li>
-        <li><a href=""></a>Crear ingrediente</li>
+        <li><a href="{{ route('ingredientes.showAllIngredientes') }}"></a>Lista de ingredientes</li>
+        <li><a href="{{ route('ingredientes.create') }}"></a>Crear ingrediente</li>
     </ul>
 </body>
 
