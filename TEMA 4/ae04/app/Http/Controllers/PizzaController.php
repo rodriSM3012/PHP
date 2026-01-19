@@ -16,7 +16,7 @@ class PizzaController extends Controller
 
     public function showOnePizza($id)
     {
-        $alumno = Pizza::with('ingredientes')->findOrFail($id);
+        $pizza = Pizza::with('ingredientes')->findOrFail($id);
         return view('pizzas.showOnePizza', compact('pizza'));
     }
 }
