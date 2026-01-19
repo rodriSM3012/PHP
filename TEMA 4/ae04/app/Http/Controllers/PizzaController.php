@@ -35,18 +35,26 @@ class PizzaController extends Controller
         ]);
     }
 
-    public function edit()
+    public function edit($id)
     {
+        $pizza = Pizza::findOrFail($id);
         return view('pizzas.edit', compact('pizza'));
     }
 
-    public function delete()
+    public function update(Request $request, $id)
     {
-        return view('pizzas.confirmDelete');
+        $pizza = Pizza::findOrFail($id);
     }
 
-    public function destroy(Pizza $pizza)
+    public function delete($id)
     {
+        $pizza = Pizza::findOrFail($id);
+        return view('pizzas.confirmDelete', compact('pizza'));
+    }
+
+    public function destroy($id)
+    {
+        $pizza = Pizza::findOrFail($id);
         $pizza->delete();
         return redirect()
             ->route('pizzas.showAllPizzas')
