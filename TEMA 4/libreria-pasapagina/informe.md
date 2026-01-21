@@ -30,3 +30,31 @@ El objetivo de este informe es centralizar y analizar la información de la libr
         - actualziar libro (objeto completo) → PUT (request)
     - 
     
+----------------------
+
+# CRUD
+## C 
+    - get → *nada*
+    - post → request
+## R 
+    - get → *nada*
+    - get → ID / objeto
+## U
+    - get → objeto (NO ID)
+    - put / patch → request
+## D 
+    - get → [codigo js]
+    - delete → objeto (NO ID)
+
+# Pasos Proyecto Laravel
+1. modificar .env
+2. `php artisan make:controller LibroController --resource --model=Libro`
+    - metodo index create show edit update confrimDestroy destroy
+
+- borrar todo menos Route:: de web.php
+- ```
+  use App\Http\Controllers\LibroController;
+  Route::resource('libro', LibroController::class);
+  ```
+
+- `php artisan route:list` → devuelvve lista de todas las rutas creadas
