@@ -20,3 +20,7 @@ todos los controladores tienen que terminar por Controller
 `php artisan make:seeder PizzaSeeder`
 ### ejecutar seeder
 ``
+PARA ERROR → `composer install` en carpeta del proyecto
+
+### mostrar todas las rutas
+`php artisan route:list`
