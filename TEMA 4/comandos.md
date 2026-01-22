@@ -19,7 +19,7 @@ todos los controladores tienen que terminar por Controller
 ### crear seeder
 `php artisan make:seeder PizzaSeeder`
 ### ejecutar seeder
-``
+`php artisan migrate:fresh --seed`
 PARA ERROR → `composer install` en carpeta del proyecto
 
 ### mostrar todas las rutas
