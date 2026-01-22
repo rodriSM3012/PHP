@@ -13,13 +13,15 @@ class DatabaseSeeder extends Seeder
     /**
      * Seed the application's database.
      */
-    public function run(): void
+    public function up(): void
     {
-        // User::factory(10)->create();
-
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        Schema::create('libros', function (Blueprint $table) {
+            $table->id();
+            $table->string('nombre');
+            $table->string('autor');
+            $table->decimal('precio', 5, 2);
+            $table->integer('paginas');
+            $table->timestamps();
+        });
     }
 }
