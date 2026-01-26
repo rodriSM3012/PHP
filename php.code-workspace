@@ -2,6 +2,12 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "D:/RodrigoSanchezMartinez/DAW2/DWES/TEMA4/DWES Tema 4 - Laravel, Iniciación - CRUD/ae04"
+		},
+		{
+			"path": "../EXAMEN DWES T4/ex04"
 		}
 	],
 	"settings": {
