@@ -24,3 +24,6 @@ PARA ERROR → `composer install` en carpeta del proyecto
 
 ### mostrar todas las rutas
 `php artisan route:list`
+
+### crear modelo con migraciones
+`php artisan make:model Vehicle -m`
