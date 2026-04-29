@@ -27,3 +27,6 @@ PARA ERROR → `composer install` en carpeta del proyecto
 
 ### crear modelo con migraciones
 `php artisan make:model Vehicle -m`
+
+### instalar api
+`php artisan install api`
