@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model\Relations\BelongsToMany;
 class Lector extends Model
 {
     protected $fillable = ['nombre', ' apellidos'];
-    public function libros()
+    public function lectores()
     {
-        return $this->belongsToMany(Libro::class)
+        return $this->belongsToMany(Lector::class)
             ->wihtPivot(['id', 'fecha_prestamo', 'fecha_devolucion'])
             ->withTimeStamps();
     }
