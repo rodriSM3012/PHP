@@ -30,3 +30,14 @@ PARA ERROR → `composer install` en carpeta del proyecto
 
 ### instalar api
 `php artisan install api`
+
+## instalar pest
+`composer require laravel/breeze --dev`
+`php artisan breeze:install`
+`composer remove phpunit/phpunit`
+`composer require pestphp/pest --dev --with-all-dependencies`
+`./vendor/bin/pest -init`
+`./vendor/bin/pest/php artisan test`
+
+### crear test 
+`php artisan make:test PostAccessTest --pest`
