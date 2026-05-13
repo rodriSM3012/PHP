@@ -41,3 +41,6 @@ PARA ERROR → `composer install` en carpeta del proyecto
 
 ### crear test 
 `php artisan make:test PostAccessTest --pest`
+
+### crear factory
+`php artisan make:factory NombreFactory`
