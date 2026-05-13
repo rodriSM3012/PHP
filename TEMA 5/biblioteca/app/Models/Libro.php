@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Model\Relations\BelongsToMany;
 class Libro extends Model
 {
-    protected $fillable = ['titulo', 'autor', ' prestado'];
-    public function libros()
+    protected $fillable = ['titulo', 'autor', 'prestamo'];
+    public function lectores()
     {
         return $this->belongsToMany(Libro::class)
-            ->wihtPivot(['id', 'fecha_prestamo', 'fecha_devolucion'])
-            ->withTimeStamps();
+            ->withPivot(['id', 'fecha_prestamo', 'fecha_devolucion'])
+            ->withTimestamps();
     }
 }
